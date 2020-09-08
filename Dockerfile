@@ -15,7 +15,7 @@ RUN cp /repo/vulscan/*.nse /repo/vulscan/*.csv /nmap/scripts/vulscan/
 
 FROM alpine:latest
 
-RUN apk add --quiet --no-cache nmap nmap-scripts
+RUN apk add --quiet --no-cache exim nmap nmap-scripts
 
 COPY --from=git /nmap/ /usr/share/nmap/
 
