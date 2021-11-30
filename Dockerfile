@@ -17,7 +17,7 @@ FROM alpine:latest
 
 RUN apk add --quiet --no-cache exim libc6-compat nmap nmap-scripts
 
-RUN wget -q -O /usr/local/bin/slackcat https://github.com/bcicen/slackcat/releases/download/v1.6/slackcat-1.6-linux-amd64 && \
+RUN wget -q -O /usr/local/bin/slackcat https://github.com/bcicen/slackcat/releases/download/1.7.3/slackcat-1.7.3-linux-amd64 && \
     chmod +x /usr/local/bin/slackcat
 
 COPY --from=git /nmap/ /usr/share/nmap/
